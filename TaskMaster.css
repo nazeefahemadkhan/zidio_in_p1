@@ -1,0 +1,172 @@
+/*General class*/
+.hidden{
+    display: none;
+}
+
+body{
+    background-color: silver;
+}
+
+h1, h2, h3, p, span{
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+h1{
+    text-shadow: 1px 1px black;
+    text-align: center;
+    font-size: 42pt;
+}
+
+input{
+    border: 5px double black;
+    width: 150px;
+}
+
+/*makes an x to close or delete*/
+.close{
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*container for g-events and tasks*/
+
+#container{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+}
+
+/* google api classes and id's*/
+/* google related content has unique id and classes despite being the same style wise to task.
+this is to make manipulating these elements easier in the javascript.
+ */
+#g-container, #Task-container, #schedule{
+    border: 10px antiquewhite double;
+    width: 300px;
+    padding: 10px;
+    margin: 15px;
+    background-color: black;
+}
+
+.gevent, .task, .task-schedule{
+    padding: 10px;
+    margin: 2px;
+    background-color: antiquewhite;
+    border: outset silver 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.gevent-click{
+    padding: 10px;
+    background-color: antiquewhite;
+    border: inset silver 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/*buttons css*/
+#authorize_button, #signout_button, #add-task, #task-submit, #Pomodoro-timer-init{
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 4px outset silver;
+    cursor: pointer;
+}
+
+
+/*overlay code*/
+/*creates overlay*/
+.overlay-container{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000007F;
+}
+
+/*controls background of overlay*/
+.task-input-info{
+    background-color: antiquewhite;
+    margin: auto;
+    padding: 20px;
+    border: 5px solid silver;
+    border-radius: 25px;
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*displays information about task on hover*/
+.task-info{
+    display: none;
+    list-style-type: none;
+}
+
+.task-info>li{
+    marign-left: 10px;
+}
+
+.text:hover ~.task-info{
+    display: block;
+}
+
+.task-info:hover{
+    display:block;
+}
+
+/*edit and del button*/
+.edit, .del{
+    float: right;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px outset silver;
+    cursor: pointer;
+}
+
+/*schedule css*/
+
+#priority1>div{
+    padding: 10px;
+    margin: 2px;
+    background-color: antiquewhite;
+    border: outset red 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#priority2>div{
+    padding: 10px;
+    margin: 2px;
+    background-color: antiquewhite;
+    border: outset green 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#priority2>div{
+    padding: 10px;
+    margin: 2px;
+    background-color: antiquewhite;
+    border: outset blue 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+

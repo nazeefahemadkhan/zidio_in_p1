@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Calendar API Quickstart</title>
+    <meta charset="utf-8" />
+    <link href="TaskMaster.css" rel = "stylesheet">
+    <!--google api script. not sure what it does-->
+    <script async defer src="https://apis.google.com/js/api.js"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+</head>
+
+<body>
+<h1>TaskMaster</h1>
+
+<div id ="container">
+    <!--container for google api-->
+    <div id="g-container">
+        <h2>Google Events List</h2>
+        <p>Sign into your google account to get calendar events</p>
+        <button id="authorize_button" >Authorize</button>
+        <button id="signout_button" >Sign Out</button>
+        <div id="gevent-list">
+
+        </div>
+    </div>
+    <!--container for tasks-->
+    <div id="Task-container">
+        <h2>Task List</h2>
+        <button id="add-task">Add Task</button>
+        <div id="task-list">
+
+        </div>
+    </div>
+
+    <div id="schedule">
+        <h2>Today's Schedule</h2>
+        <h3>Total Hours: <span id="time">00:00</span></h3>
+        <div id="priority1">
+            <p>Priority 1:</p>
+
+        </div>
+        <div id="priority2">
+            <p>Priority 2:</p>
+
+        </div>
+        <div id="priority3">
+            <p>Priority 3:</p>
+
+        </div>
+        <button id="Pomodoro-timer-init">Start Pomodoro Timer</button>
+    </div>
+</div>
+
+<!--google api only works when I put the script here.
+I have no idea why.-->
+<script type="text/javascript" src="TaskMaster.js"></script>
+
+
+</body>
+
+<!--overlay HTML elements-->
+
+<div id="add-task-overlay" class="overlay-container">
+    <div class="task-input-info">
+    <span class="close">&times;</span>
+    <form class="task-form">
+        <label for="task-name">Task Name</label>
+        <input type="text" id="task-name" name="task-name" placeholder="task name" required><br><br>
+        <label for="task-priority">Priority</label>
+        <input type="number" id="task-priority" name="task-priority" min="1" max="3"required><br><br>
+        <label for="task-hour">Allot Hours</label>
+        <input type="number" id="task-hour" name="task-hour" max="8" required><br><br>
+        <label for="task-min">Allot Minutes</label>
+        <input type="number" id="task-min" name="task-min" max="59" required><br><br>
+    </form>
+        <button id="task-submit">Submit</button>
+    </div>
+</div>
+
+<div id="add-gtask-overlay" class="overlay-container">
+    <div class="task-input-info">
+        <span class="close">&times;</span>
+        <form>
+            <label>Priority</label>
+            <input type="number" id="gtask-priority" name="task-priority" min="1" max="3" required><br><br>
+            <label>Allot Hours</label>
+            <input type="number" id="gtask-hour" name="gtask-hour" max="8" required><br><br>
+            <label>Allot Minutes</label>
+            <input type="number" id="gtask-min" name="gtask-min" max="59" required><br><br>
+            <button id="gtask-submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+</html>
+<!-- [END calendar_quickstart] -->

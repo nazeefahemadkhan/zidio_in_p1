@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="Pomodoro.css" rel="stylesheet">
+    <script src="Pomodoro.js"></script>
+</head>
+<body class="pom">
+<h1>Pomodoro Timer</h1>
+<div id="nav-bar">
+    <ul id="nav">
+        <li><button class="nav-btn">Pom Stats</button></li>
+        <li><button class="nav-btn">Short break Stats</button></li>
+        <li><button class="nav-btn">Long break Stats</button></li>
+        <li><button id="setting-btn" class="nav-btn">Settings</button></li>
+    </ul>
+</div>
+<div id="box">
+    <div id="btn-box">
+        <button class="btn btn-active">Pomodoro</button>
+        <button class="btn">Short Break</button>
+        <button class="btn">Long Break</button>
+    </div>
+    <p>Timer<br><span id="timer">25:00</span></p>
+    <div>
+        <button id="Start">Start</button>
+    </div>
+</div>
+<!--<div id="tracker">
+    <p>Get to work!</p>
+    <p>Up Next: <span>Short Break</span></p>
+</div>
+<div id="tasks">
+    <ul id="tasks-list">
+        <li>
+            <div class="task">
+                <p>Test</p>
+                <p>Poms: 0/0</p>
+                <button class="task-btn">Edit</button>
+                <button class="task-btn">Delete</button>
+            </div>
+        </li>
+    </ul>
+    <button id="add-task">Add Task +</button>
+</div>-->
+
+<!--<div id="task-input">
+    <form>
+        <label for="task-name">Task Name</label>
+        <input type="text" id="task-name" name="task-name">
+        <label>Number of Poms</label>
+        <input type="number" id="pom-num" name="pom-num" value="1">
+    </form>
+</div>
+
+<div id="tasks">
+    <ul id="tasks-list">
+    </ul>
+    <button id="add-task">Add Task +</button>
+</div>-->
+
+<!--Settings menu html-->
+
+<div id="setting">
+    <div class="setting-content">
+        <span id="close">&times;</span>
+        <form>
+            <label for="pom-s">Pom Timer: </label>
+            <input type="number" id="pom-s" name="pom-s" value="25"><br><br>
+            <label for="short-s">Short Break</label>
+            <input type="number" id="short-s" name="short-s" value="5"><br><br>
+            <label for="long-s">Long Break</label>
+            <input type="number" id="long-s" name="long-s" value="15"><br><br>
+        </form>
+    </div>
+</div>
+
+<!--Stats Overlay-->
+
+<div id="overlay">
+</div>
+</body>
+</html>
